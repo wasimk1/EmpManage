@@ -8,6 +8,7 @@
     <link href="css/style.css"/ rel="stylesheet" />
 </head>
 <body>
+   
     <div class="header">
         <p>SUNTECH</p>
     </div>
@@ -15,5 +16,7 @@
     </div>
     <div class="footer">
     </div>
+      
+
 </body>
 </html>
