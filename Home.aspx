@@ -5,12 +5,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Employee Records</title>
-    <link href="css/style.css"/ rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
    
     <div class="header">
-        <p>SUNTECH</p>
+        <div class="header-logo">Logo</div>
+        <div class="header-name">name</div>
     </div>
     <div class="main-body">
     </div>
