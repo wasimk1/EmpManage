@@ -13,10 +13,14 @@ namespace EmpManage
         {
 
         }
-
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void btnloginfromhome_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AllMenu.aspx");
+            Response.Redirect("LoginPage.aspx");
+        }
+
+        protected void btnregfromhome_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("RegPage.aspx");
         }
     }
 }
