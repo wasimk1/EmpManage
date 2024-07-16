@@ -25,39 +25,27 @@ body {
 .main-body {
     width: 100%;
     height: 80vh;
-    /*background-color: yellow;*/
+    background-color: yellow;
     display: flex;
     justify-content: center;
 }
 
 
 
-    .main-body .main-left {
-        width: 40%;
-        display:flex;
-        align-items:center;
-        /*background-color: cadetblue;*/
-    }
+.main-left {
+    background-color: red;
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
 
-    .main-body .main-right {
-        width: 40%;
-        /*background-color: olive;*/
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-
-        .main-body .main-right .btndesign1 {
-            /*width: 100%;*/
-            /*background-color: olive;*/
-            padding: 0 0 0 15%;
-        }
-
-        .main-body .main-right .btndesign2 {
-            /*width: 100%;*/
-            /*background-color: green;*/
-            padding: 0 15% 0 0;
-        }
+.main-right {
+    background-color: olivedrab;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 
 .btnstyle {
     background-color: deepskyblue;
@@ -89,7 +77,7 @@ body {
 .footer {
     width: 100%;
     height: 10vh;
-    background-color: lightpink;
+    /*background-color: lightpink;*/
     display: flex;
     justify-content: center;
 }
