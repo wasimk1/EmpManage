@@ -67,12 +67,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\master-style.css" />
     <Content Include="css\style.css" />
     <Content Include="Home.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="RegPage.aspx" />
     <Content Include="Web.config" />
     <Content Include="AllMenuOptions.aspx" />
+    <Content Include="HomeAllMenus.aspx" />
+    <Content Include="ApplyLeave.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Home.aspx.cs">
@@ -110,6 +113,20 @@
     </Compile>
     <Compile Include="AllMenuOptions.aspx.designer.cs">
       <DependentUpon>AllMenuOptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeAllMenus.aspx.cs">
+      <DependentUpon>HomeAllMenus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeAllMenus.aspx.designer.cs">
+      <DependentUpon>HomeAllMenus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplyLeave.aspx.cs">
+      <DependentUpon>ApplyLeave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplyLeave.aspx.designer.cs">
+      <DependentUpon>ApplyLeave.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

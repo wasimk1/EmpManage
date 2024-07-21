@@ -15,7 +15,7 @@ namespace EmpManage
         }
         protected void btnloginfromhome_Click(object sender, EventArgs e)
         {
-            Response.Redirect("LoginPage.aspx");
+            Response.Redirect("HomeAllMenus.aspx");
         }
 
         protected void btnregfromhome_Click(object sender, EventArgs e)

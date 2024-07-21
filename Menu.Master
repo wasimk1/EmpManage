@@ -4,7 +4,30 @@
 
 <html>
 <head runat="server">
-    <title></title>
+    <title>SBS | Employee Leave Management</title>
+    <link href="css/master-style.css" rel="stylesheet" />
+
+
+    <div class="main-header">
+        <div class="header-left">
+            <img src="images/suntech-logo.jpg" alt="Suntech Business Solutions" />
+        </div>
+        <div class="header-right">
+            <nav>
+                <ul>
+                    <li><a href="ApplyLeave.aspx" >Apply Leave</a></li>
+                    <li><a href="#experience">Apply Work From Home</a></li>
+                    <li><a href="#aboutme">Apply Extra Working</a></li>
+                    <li><a href="#aboutme">Delete Applied Leave</a></li>
+                    <li><button class="btn" type="submit" name="btn-showsum" onclick="window.open('https://www.linkedin.com/in/wasimk1/')">Summary Report</button></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>

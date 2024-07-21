@@ -26,9 +26,9 @@
             </div>
             <div class="main-right">
 
-                <%-- <div class="btndesign1">
+                 <div class="btndesign1">
                     <asp:Button ID="btnloginfromhome" runat="server" OnClick="btnloginfromhome_Click" Text="Log-In" class="btnstyle" />
-                </div>--%>
+                </div>
 
                 <%-- <div class="btndesign2">   
                     <asp:Button ID="btnregfromhome" runat="server" OnClick="btnregfromhome_Click" Text="Register" class="btnstyle" />
