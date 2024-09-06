@@ -1,0 +1,22 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: black;
+    background-color: lightblue;
+}
+
+.login-main {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+p{
+    font-size:13px;
+}

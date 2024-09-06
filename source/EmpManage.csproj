@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\loginstyle.css" />
     <Content Include="css\master-style.css" />
     <Content Include="css\style.css" />
     <Content Include="Home.aspx" />
@@ -99,6 +100,7 @@
     <Compile Include="Menu.Master.designer.cs">
       <DependentUpon>Menu.Master</DependentUpon>
     </Compile>
+    <Compile Include="Others\helper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegPage.aspx.cs">
       <DependentUpon>RegPage.aspx</DependentUpon>
