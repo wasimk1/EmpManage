@@ -19,14 +19,14 @@ namespace EmpManage
         public static int usererrlogincount = 0;
         public string errmsg = string.Empty;
         public string strcmd = string.Empty;
-        public string GetTime = string.Empty;
+        public string GetTimePassWord = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
                 conn = new SqlConnection(constr);
                 conn.Open();
-                GetTime=getrealTime();
+                GetTimePassWord = getrealTime();
             }
             catch (Exception ex)
             {
@@ -60,6 +60,22 @@ namespace EmpManage
             }
 
         }
+        public void DoLockedUser()
+        {
+            try
+            {
+                strcmd = "";
+                strcmd = "UPDATE EMP_USERS_DETAILS SET EMP_STATUS='INACTIVE' WHERE TXT_USERNAME='" + txtuser.Text.ToUpper().ToString().Trim() + "'";
+                SqlCommand sqlcmd = new SqlCommand(strcmd, conn);
+                sqlcmd.ExecuteNonQuery();
+                conn.Close();
+            } 
+            catch (Exception ex )
+            {
+                objhelper.MessageBox(this, ex.Message);
+            }
+            
+        }
         public void DoUsersLogin()
         {
             try
@@ -75,11 +91,11 @@ namespace EmpManage
                     if (userstatus == dt_user.Rows[0]["EMP_STATUS"].ToString().Trim())
                     {
                         if (txtuser.Text.ToUpper().ToString().Trim() == dt_user.Rows[0]["TXT_USERNAME"].ToString().Trim() &&
-                            txtpass.Text.ToUpper().ToString().Trim() == GetTime)
+                            txtpass.Text.ToUpper().ToString().Trim() == GetTimePassWord)
                         {
                             Session["username"] = txtuser.Text.ToUpper().ToString().Trim();
                             Session["password"] = txtpass.Text.ToUpper().ToString().Trim();
-                            Response.Redirect("");
+                            Response.Redirect("HomeAllMenus.aspx");
                         }
                         else
                         {
@@ -88,7 +104,10 @@ namespace EmpManage
                             {
                                 errmsg = "";
                                 errmsg = "Userid is locked, contact admin";
+                                DoLockedUser();
                                 objhelper.MessageBox(this, errmsg);
+                                //DoLockedUser();
+
                                 return;
                             }
                             else
@@ -125,23 +144,37 @@ namespace EmpManage
 
         public bool Validate()
         {
-            Boolean result = true;
-            if (string.IsNullOrEmpty(txtuser.Text.Trim()))
+            try
             {
-                errmsg = "Username cannot be empty!";
-                objhelper.MessageBox(this, errmsg);
-                result = false;
-                return result;
-            }
+                Boolean result = true;
+                if (string.IsNullOrEmpty(txtuser.Text.Trim()))
+                {
+                    errmsg = "Username cannot be empty!";
+                    objhelper.MessageBox(this, errmsg);
+                    result = false;
+                    return result;
+                }
 
-            if (string.IsNullOrEmpty(txtpass.Text))
-            {
-                errmsg = "Password cannot be empty!";
-                objhelper.MessageBox(this, errmsg);
-                result = false;
+                if (string.IsNullOrEmpty(txtpass.Text))
+                {
+                    errmsg = "Password cannot be empty!";
+                    objhelper.MessageBox(this, errmsg);
+                    result = false;
+                    return result;
+                }
                 return result;
             }
-            return result;
+            catch (Exception ex )
+            {
+                objhelper.MessageBox(this, ex.Message);
+                return false;
+            }
+            
+        }
+
+        protected void linkbtncreateuser_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("RegPage.aspx");
         }
     }
 }

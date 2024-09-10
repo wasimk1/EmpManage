@@ -70,7 +70,6 @@
     <Content Include="css\loginstyle.css" />
     <Content Include="css\master-style.css" />
     <Content Include="css\style.css" />
-    <Content Include="Home.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="RegPage.aspx" />
     <Content Include="Web.config" />
@@ -79,13 +78,6 @@
     <Content Include="ApplyLeave.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Home.aspx.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home.aspx.designer.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
-    </Compile>
     <Compile Include="LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

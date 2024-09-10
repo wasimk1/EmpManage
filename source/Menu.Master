@@ -8,7 +8,7 @@
     <link href="css/master-style.css" rel="stylesheet" />
 
 
-    <div class="main-header">
+    <div class="main-header" >
         <div class="header-left">
             <img src="images/suntech-logo.jpg" alt="Suntech Business Solutions" />
         </div>

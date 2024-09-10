@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>SBS Mumbai | Leave Manage</title>
+    <title>SBS Mumbai | Leave Manage | Login Page</title>
     <link rel="stylesheet" href="css/loginstyle.css" />
 </head>
 <body>
@@ -46,13 +46,17 @@
                 </tr>
             </table>
 
+            <br />
+
+            <p>
+                <asp:LinkButton ID="linkbtnforgetpass" runat="server">Forgot Password?</asp:LinkButton>
+            </p>
+            <br />
+            <p>
+                <asp:LinkButton ID="linkbtncreateuser" runat="server" OnClick="linkbtncreateuser_Click">Don&#39;t have an Account ? Create new one</asp:LinkButton>
+            </p>
+
         </form>
-        <br />
-        
- <p>
-     <asp:Label ID="Label3" runat="server" Text="Forgot Password?"></asp:Label></p><br />
- <p>
-     <asp:Label ID="Label4" runat="server" Text="Don't have an Account ? Create new one"></asp:Label></p>
 
     </div>
 
